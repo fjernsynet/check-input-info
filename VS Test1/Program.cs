@@ -7,13 +7,15 @@ namespace VS_Test1
         // Method checking what year you are born
         static int WhenBirthday(int age, bool birthYet)
         {
+            int currentYear = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+
             if (birthYet == true)
             {
-                return 2022 - age;
+                return currentYear - age;
             }
             else if (birthYet == false)
             {
-                return 2022 - (age + 1);
+                return currentYear - (age + 1);
             }
             else
             {
